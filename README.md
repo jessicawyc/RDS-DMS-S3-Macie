@@ -27,8 +27,8 @@ Cloudformation完成后,需要手动添加以下IAM Policy给生成的dms-vpc-ro
                 "s3:DeleteObject"
             ],
             "Resource": [
-                "arn:aws:s3:::dcp-macie-eu-west-3-980217471394",
-                "arn:aws:s3:::dcp-macie-eu-west-3-980217471394/*"
+                "arn:aws:s3:::dcp-macie-<bucketname>",
+                "arn:aws:s3:::dcp-macie-<bucketname>/*"
             ]
         }
     ]
