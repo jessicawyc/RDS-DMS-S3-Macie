@@ -15,5 +15,22 @@ updated code from aws security blog https://aws.amazon.com/blogs/security/enabli
 
 Cloudformation完成后,需要手动添加以下IAM Policy给生成的dms-vpc-role :
 ```
-wait
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "DMStoS3Policy",
+            "Effect": "Allow",
+            "Action": [
+                "s3:PutObject",
+                "s3:ListBucket",
+                "s3:DeleteObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::dcp-macie-eu-west-3-980217471394",
+                "arn:aws:s3:::dcp-macie-eu-west-3-980217471394/*"
+            ]
+        }
+    ]
+}
 ```
