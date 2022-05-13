@@ -1,7 +1,9 @@
 # Enabling data classification for Amazon RDS database with Macie 
 将RDS导入S3后使用Macie检测将敏感数据分类分级Solution
 updated code from aws security blog https://aws.amazon.com/blogs/security/enabling-data-classification-for-amazon-rds-database-with-amazon-macie/
-原文中的cloudformation template运行报错,目前正在想办法修复中
+原文中的cloudformation template运行报错,已于今年2022年5月22日完成修复,可以直接使用.
+以下workaround不再需要
+--------------------------------------------------------------------------------------------------------------------------------------------------------
 ## Workaround
 如果报错为IAM 创建dms-vpc-role失败,
 >The IAM Role arn:aws:iam::*:role/dms-vpc-role is not configured properly. (Service: AWSDatabaseMigrationService; Status Code: 400; Error Code: AccessDeniedFault; Request ID: ad9a719b-231d-4c0b-9767-a735845debb9; Proxy: null)
